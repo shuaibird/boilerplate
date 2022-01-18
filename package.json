@@ -1,0 +1,49 @@
+{
+  "name": "boilerplate",
+  "private": true,
+  "version": "6.12.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "rm -rf dist; NODE_ENV=development yarn swift build -w",
+    "build": "NODE_ENV=production yarn swift build",
+    "wxci:preview": "node scripts/wx-ci.js preview",
+    "wxci:upload": "node scripts/wx-ci.js upload",
+    "test": "jest",
+    "prepare": "husky install",
+    "new:page": "cp templates/page/* $npm_config_path && cd $npm_config_path && rename -vs template-page $npm_config_name * && cd -",
+    "new:comp": "cp templates/component/* $npm_config_path && cd $npm_config_path && rename -vs template-comp $npm_config_name * && cd -",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@wiredcraft/miniprogram-sparrow": "0.0.6-rc.0",
+    "@wiredcraft/miniprogram-swift-cli": "0.0.6",
+    "regenerator-runtime": "0.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/crypto-js": "^4.0.1",
+    "@types/dlv": "^1.1.2",
+    "@types/jest": "^26.0.21",
+    "@types/wechat-miniprogram": "3.3.0",
+    "@wiredcraft/babel-plugin-import-regenerator": "0.0.2",
+    "acorn": "^8.0.5",
+    "autoprefixer": "^10.2.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "miniprogram-ci": "^1.0.98",
+    "patch-package": "^6.4.7",
+    "postcss": "^8.2.6",
+    "postcss-nested": "^5.0.3",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "pug": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.1.5"
+  }
+}

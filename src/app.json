@@ -1,0 +1,21 @@
+{
+  "compileType": "miniprogram",
+  "networkTimeout": {
+    "request": 10000
+  },
+  "pages": ["pages/index"],
+
+  "subpackages": [],
+  "usingComponents": {},
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "boilerplate",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
